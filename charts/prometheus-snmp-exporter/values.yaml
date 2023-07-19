@@ -92,7 +92,7 @@ service:
   port: 9116
   ipFamilies:
   - IPv4
-  ipFamilyPolicy: PreferDualStack
+  ipFamilyPolicy: SingleStack
 
 ## An Ingress resource can provide name-based virtual hosting and TLS
 ## termination among other things for CouchDB deployments which are accessed
