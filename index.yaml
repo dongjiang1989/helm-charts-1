@@ -839,6 +839,73 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: v0.66.0
+    created: "2023-08-22T06:31:07.137264309Z"
+    dependencies:
+    - condition: crds.enabled
+      name: crds
+      repository: ""
+      version: 0.0.0
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 5.10.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.21.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.58.*
+    - condition: windowsMonitoring.enabled
+      name: prometheus-windows-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 0.1.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: 8583aa41206462f68cdef925ee9ae2918f9e8eb94e61cc4b79c152dcbe05cf27
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andrew@quadcorps.co.uk
+      name: andrewgkew
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: kube-prometheus-stack@sisti.pt
+      name: GMartinez-Sisti
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: quentin.bisson@gmail.com
+      name: QuentinBisson
+    name: kube-prometheus-stack
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - https://github.com/dongjiang1989/helm-charts-1/releases/download/kube-prometheus-stack-48.3.2/kube-prometheus-stack-48.3.2.tgz
+    version: 48.3.2
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v2
+    appVersion: v0.66.0
     created: "2023-08-16T09:19:48.606348378Z"
     dependencies:
     - condition: crds.enabled
@@ -31947,6 +32014,30 @@ entries:
   prometheus-adapter:
   - apiVersion: v1
     appVersion: v0.11.0
+    created: "2023-08-22T06:31:07.29681553Z"
+    description: A Helm chart for k8s prometheus adapter
+    digest: b4d87cc03d65293d3525d6f8ba2fb0c35e57a78d7e5a9bde4ed64f8a59f5e785
+    home: https://github.com/kubernetes-sigs/prometheus-adapter
+    keywords:
+    - hpa
+    - metrics
+    - prometheus
+    - adapter
+    maintainers:
+    - email: mattias.gees@jetstack.io
+      name: mattiasgees
+    - name: steven-sheehy
+    - email: hfernandez@mesosphere.com
+      name: hectorj2f
+    name: prometheus-adapter
+    sources:
+    - https://github.com/kubernetes/charts
+    - https://github.com/kubernetes-sigs/prometheus-adapter
+    urls:
+    - https://github.com/dongjiang1989/helm-charts-1/releases/download/prometheus-adapter-4.4.1/prometheus-adapter-4.4.1.tgz
+    version: 4.4.1
+  - apiVersion: v1
+    appVersion: v0.11.0
     created: "2023-08-21T08:49:01.918873191Z"
     description: A Helm chart for k8s prometheus adapter
     digest: 29c380c3760dfe1893a3e0bf9076e8ab27f90d9daf34d25fd874a4ce82e4810f
@@ -58219,4 +58310,4 @@ entries:
     urls:
     - https://github.com/dongjiang1989/helm-charts-1/releases/download/prometheus-windows-exporter-0.1.0/prometheus-windows-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-21T08:49:02.395785519Z"
+generated: "2023-08-22T06:31:07.302645445Z"
